@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Netflix</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav_left">
+            <a href="index.html"> 
+                <img class="nav_logo" src="./netflixlogo.jpeg" alt="Netflix Logo">
+            </a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="cont    ainer-fluid">
+              <a class="navbar-brand"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">TV Shows</a>
+                  <a class="nav-link" href="#">Movies</a>
+                  <a class="nav-link" href="#">Popular</a>
+                  <a class="nav-link" href="#">MyList</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-light" type="submit">Search</button>
+            </form>
+          </div>
+
+        <div class="nav_right">
+            <img class="nav_avatar" src="./loginlogo.png" alt="Login Logo">
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+            <!-- Banner -->
+            <header id="banner">
+                <div id="banner_contents">
+                    <h1 id="banner_title"></h1>
+                    <div id="banner_buttons">
+                        <button id="banner_button">Play</button>
+                        <button id="banner_button">My List</button>
+                    </div>
+                    <p id="banner_description"></p>
+                </div>
+                <div id="banner_fadeBottom"></div>
+            </header>
+        
+        <div class="content">
+            <!-- Row -->
+            <div id="headrow">
+                <div class="row">
+                    <h2 class="row-title"></h2>
+                    <div class="row_posters"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("scroll",function(){
+            var nav=document.querySelector(".nav");
+            nav.classList.toggle("active",window.scrollY>0);
+        })
+    </script>
+    <script src="./index.js" charset="UTF-8"></script>
+</body>
+</html>
